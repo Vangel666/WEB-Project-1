@@ -234,3 +234,75 @@ hr {
     max-width: 90%;
   }
 }
+/* ========== Улучшенное Меню Навигации ========== */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 18px 0;
+  background-color: #181818;
+  border-bottom: 1px solid rgba(0, 255, 200, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+  position: sticky;   /* или fixed */
+  top: 0;
+  z-index: 999;
+}
+
+nav a {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2em;
+  color: #00ffc8;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00ffc8;
+  box-shadow: 0 0 5px #00ffc8;
+  transition: width 0.4s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #00ffc8, 0 0 15px #00ffc8;
+}
+.nav-wrapper {
+  background-color: #141414;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: 2px solid #00ffc8;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 200, 0.4),
+    0 0 30px rgba(0, 255, 200, 0.2) inset;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative; /* Важно для полоски */
+}
+
+/* 💡 Добавляем неоновую полоску сверху */
+.nav-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background: #00ff99;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+}
