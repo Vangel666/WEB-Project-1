@@ -6,88 +6,37 @@
   <title>QA Journey by Leon Pshigodsky</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <style>
-    @media (max-width: 768px) {
-      header h1,
-      .skills-section h2,
-      .about-section h2 {
-        font-size: 1.8em;
-        text-align: center;
-        padding: 0 10px;
-      }
-
-      .skills-grid,
-      .about-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .skill-block,
-      .about-grid p {
-        max-width: 90%;
-        text-align: center;
-      }
-
-      .contact-section {
-        position: static;
-        margin: 20px auto;
-        width: 90%;
-        text-align: center;
-      }
-
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .hero-section h1 {
-        font-size: 2em;
-      }
-
-      .skill-image,
-      .image-block img {
-        max-width: 90%;
-        margin-bottom: 20px;
-      }
-    }
-  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<script>
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  function scrollToBottom() {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  }
-</script>
-
   <header>
     <h1>My Way to the World of QA</h1>
   </header>
 
+  <nav>
+    <div class="nav-wrapper">
+      <span class="neon-line"></span>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <span class="neon-line"></span>
+    </div>
+  </nav>
+
   <section class="hero-section">
-    <!-- контент главного экрана или приветствия -->
+    <h2>Welcome to My QA World</h2>
+    <a href="#about" class="hero-button">Start Journey</a>
   </section>
 
-  <div class="nav-wrapper">
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</div>
-
-  <section class="about-section" id="about">
+  <section id="about" class="about-section">
     <h2>About Me</h2>
     <div class="about-grid">
       <p>
         My name is Leon, I live in Petah Tikva and I am 39 years old. I have worked for 15 years at Ivory Computers.
         Recently, I decided to change my life and started my journey into the world of QA.
         This path is very interesting and exciting — every day I learn something new.
-        I take my studies and work seriously, and I enjoy understanding how things work on a deep level.
-        One of my hobbies is 3D printing. I love creating interesting and useful things. Each new print is a new experience.
+        One of my hobbies is 3D printing. I love creating interesting and useful things.
       </p>
       <img src="images/mypicture.jpg" alt="QA Journey" class="journey-img">
     </div>
@@ -97,16 +46,16 @@
     <h2>My Skills</h2>
     <div class="skills-grid">
       <div class="skill-block">
-        <img src="images/logos5.png" alt="QA Journey" class="skill-image">
+        <img src="images/logos5.png" alt="QA Logo" class="skill-image">
       </div>
       <div class="skill-block">
         <ul>
-          <li><strong>HTML Basics</strong> – understanding structure, tags, and layout</li>
-          <li>QA Theory – types of testing, Software Development Life Cycle basics</li>
-          <li>Writing Test Cases – logical and user-focused test planning</li>
-          <li>Linux & Terminal – basic commands and navigation</li>
-          <li>Version Control (Git) – committing and working with repositories</li>
-          <li>Learning Test Automation (Python) – intro to automation frameworks</li>
+          <li><i class="fa-solid fa-code"></i> HTML Basics</li>
+          <li><i class="fa-solid fa-vial"></i> QA Theory</li>
+          <li><i class="fa-solid fa-clipboard-check"></i> Writing Test Cases</li>
+          <li><i class="fa-brands fa-linux"></i> Linux & Terminal</li>
+          <li><i class="fa-brands fa-git-alt"></i> Version Control (Git)</li>
+          <li><i class="fa-brands fa-python"></i> Test Automation (Python)</li>
         </ul>
       </div>
       <div class="skill-block">
@@ -115,11 +64,25 @@
     </div>
   </section>
 
- <section id="contact">
-  <div class="contact-section">
-    <h2>Contact</h2>
-    <p>WhatsApp: <a href="tel:+972546843133">+972-54-684-3133</a></p>
-    <p>Email: <a href="mailto:vangelion1986@gmail.com">vangelion1986@gmail.com</a></p>
-    <p>GitHub: <a target="_blank" href="https://github.com/Vangel666">github.com/Vangel666</a></p>
-  </div>
-</section>
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/project1.jpg" alt="Project Screenshot">
+        <h3>Portfolio Site</h3>
+        <p>Personal portfolio built with HTML/CSS, responsive and modern.</p>
+        <a href="https://github.com/Vangel666" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-section">
+      <h2>Contact</h2>
+      <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="tel:+972546843133">+972-54-684-3133</a></p>
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:vangelion1986@gmail.com">vangelion1986@gmail.com</a></p>
+      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Vangel666" target="_blank">github.com/Vangel666</a></p>
+    </div>
+  </section>
+</body>
+</html>
